@@ -65,10 +65,7 @@ An interactive Tableau dashboard visualizes funnel performance and enables stake
 - Signup trends over time
 - Parameter-driven filters
 
-🔗 **Tableau Public:** *(add link)*  
-📸 Screenshots in `/dashboard`
-
----
+🔗 **Tableau Dashboard **
 
 ## Key Insights
 - Post-KYC activation is the primary conversion bottleneck
