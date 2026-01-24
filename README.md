@@ -1,95 +1,104 @@
-# Funnel Analysis Project (SQL & Tableau)
+# 🔁 Funnel Analysis – User Onboarding 
 
-## Overview
-This project performs an end-to-end **funnel analysis of a user onboarding journey**, tracking users from signup to first transaction. The goal is to identify conversion bottlenecks, understand user behavior across funnel stages, and recommend data-driven improvements to increase transaction completion.
-
----
-
-## Business Objective
-- Measure user progression through onboarding stages
-- Identify high-impact drop-off points
-- Evaluate conversion performance by device and acquisition channel
-- Surface actionable insights to improve funnel efficiency
+## 📌 Overview
+This project conducts an **end-to-end funnel analysis** of a user onboarding journey, tracking users from **signup → email verification → KYC → first transaction**.  
+The objective is to identify **conversion bottlenecks**, understand **behavior across funnel stages**, and generate **data-driven recommendations** to improve activation and transaction completion.
 
 ---
 
-## Dataset
-The analysis uses user-level and event-level data containing:
-- Funnel timestamps (signup, email verification, KYC, transaction)
+## 🎯 Business Objective
+- Measure user progression across onboarding stages  
+- Identify high-impact drop-off points  
+- Evaluate conversion performance by **device** and **acquisition channel**  
+- Surface actionable insights to improve funnel efficiency and ROI  
+
+---
+
+## 📂 Dataset
+The analysis uses **user-level and event-level data**, including:
+- Funnel timestamps (signup, email verification, KYC approval, transaction)
 - Device type, country, app version
 - Acquisition channel
-- Event-level actions and errors
+- Event-level actions and system errors
 
 ---
 
-## Data Cleaning (SQL)
-All preparation was performed in SQL using a production-style workflow:
-- Created staging tables to preserve raw data
-- Removed duplicate records using window functions
-- Standardized categorical fields (device, country, channel)
-- Normalized app version values
-- Converted timestamps to `DATETIME`
-- Handled nulls and invalid sequences
-- Removed extreme time-to-conversion outliers (>720 hrs)
+## 🧹 Data Cleaning & Preparation (SQL)
+All data preparation was performed in **SQL using a production-style workflow**:
 
-📂 See `/sql/data_cleaning.sql`
+- Created **staging tables** to preserve raw data integrity  
+- Removed duplicate records using **window functions**  
+- Standardized categorical fields (device, country, channel)  
+- Normalized inconsistent app version values  
+- Converted timestamps to `DATETIME` format  
+- Handled null values and invalid event sequences  
+- Removed extreme time-to-conversion outliers (>720 hours)
 
----
-
-## Exploratory Data Analysis (EDA)
-EDA was conducted in SQL to quantify funnel performance:
-- Funnel stage user counts
-- Stage-to-stage conversion rates
-- Drop-off analysis
-- Device and acquisition channel conversion
-- Signup trends and time-to-conversion
-
-📂 See `/sql/eda.sql`
+📂 **SQL Script:** `/sql/data_cleaning.sql`
 
 ---
 
-## Funnel Metrics (Key Results)
-- Signup → Transaction conversion: **~40%**
-- Largest drop-off: **Post-KYC approval**
-- Highest-impact platforms: **Android & Web**
-- Acquisition volume ≠ conversion quality
+## 🔍 Exploratory Data Analysis (EDA)
+EDA was conducted entirely in SQL to quantify funnel performance and user behavior:
+
+- Funnel-stage user counts  
+- Stage-to-stage conversion rates  
+- Drop-off analysis by stage  
+- Conversion by device type and acquisition channel  
+- Signup trends and time-to-conversion analysis  
+
+📂 **SQL Script:** `/sql/eda.sql`
 
 ---
 
-## Tableau Dashboard
-An interactive Tableau dashboard visualizes funnel performance and enables stakeholder exploration.
-
-**Includes:**
-- Funnel drop-offs
-- Conversion by device & channel
-- Signup trends over time
-- Parameter-driven filters
-
-🔗 **Tableau Dashboard **
-
-## Key Insights
-- Post-KYC activation is the primary conversion bottleneck
-- Improving conversion efficiency has higher ROI than increasing acquisition
-- Android and Web offer the fastest optimization wins
-- Signup growth has plateaued, increasing the importance of funnel optimization
+## 📊 Key Funnel Metrics
+- **Signup → Transaction conversion:** ~**40%**  
+- **Largest drop-off:** Post-KYC approval  
+- **Highest-impact platforms:** Android & Web  
+- **Insight:** High acquisition volume does not necessarily translate to high conversion quality  
 
 ---
 
-## Recommendations
-- Improve post-KYC onboarding with guided next steps and incentives
-- Reduce friction during KYC initiation
-- Prioritize optimization on Android and Web
-- Reallocate acquisition spend toward high-conversion channels
-- Re-engage verified but inactive users
+## 📈 Tableau Dashboard
+An interactive **Tableau dashboard** was built to enable stakeholder exploration and decision-making.
+
+**Dashboard Features:**
+- Funnel drop-off visualization  
+- Conversion by device & acquisition channel  
+- Signup trends over time  
+- Parameter-driven filters for dynamic analysis  
+
+🔗 **Tableau Dashboard:** *(Add link here)*
 
 ---
 
-## Tools
-- **SQL (MySQL)** – Data cleaning & EDA  
-- **Tableau** – Visualization & dashboarding
+## 💡 Key Insights
+- Post-KYC activation is the **primary conversion bottleneck**  
+- Improving funnel efficiency delivers higher ROI than increasing acquisition volume  
+- Android and Web platforms present the **fastest optimization opportunities**  
+- Signup growth has plateaued, making funnel optimization business-critical  
 
 ---
 
-## Author
+## 🚀 Business Recommendations
+- Improve post-KYC onboarding with **guided next steps and incentives**  
+- Reduce friction during KYC initiation and approval handoff  
+- Prioritize optimization efforts on **Android and Web**  
+- Reallocate acquisition spend toward **high-conversion channels**  
+- Re-engage KYC-approved but inactive users via targeted nudges  
+
+---
+
+## 🛠️ Tools & Technologies
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge)
+
+- **SQL (MySQL)** – Data cleaning, EDA, and funnel metrics  
+- **Tableau** – Interactive dashboarding and visualization  
+
+---
+
+## 👤 Author
 **Dipanshi Dhiman**  
-Data Analyst | Canada
+📊 Data Analyst | Canada  
+Focused on product analytics, funnel optimization, and business insights
