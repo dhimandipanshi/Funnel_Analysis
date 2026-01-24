@@ -90,8 +90,12 @@ An interactive **Tableau dashboard** was built to enable stakeholder exploration
 ---
 
 ## 🛠️ Tools & Technologies
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge)
+
+<p align="left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" width="60"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau" width="120"/>
+</p>
 
 - **SQL (MySQL)** – Data cleaning, EDA, and funnel metrics  
 - **Tableau** – Interactive dashboarding and visualization  
